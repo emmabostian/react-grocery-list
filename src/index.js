@@ -16,15 +16,7 @@ class List extends React.Component {
 			empty: false,
 		};
 	}
-
-	renderItem(i) {
-		return (
-			<ListItem
-				value={this.state.items[i]}
-			/>
-		);
-	}
-
+	
 	render() {
 		const empty = this.state.empty;
 		let status;
@@ -34,9 +26,7 @@ class List extends React.Component {
 			<div>
 				<div className="status">{status}</div>
 				<ul>
-					{this.renderItem(0)}
-					{this.renderItem(1)}
-					{this.renderItem(2)}
+					{this.state.items.map((item, i) => <ListItem value={item} />)}
 				</ul>
 			</div>
 		);
