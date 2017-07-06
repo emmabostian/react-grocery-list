@@ -96,6 +96,10 @@ class Cards extends React.Component {
 }
 
 ReactDOM.render(
-	<Cards />,
+<div>
+	<Cards />
+	<Cards />
+	<Cards />
+</div>,
 	document.getElementById('root')
 );
